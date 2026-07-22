@@ -99,9 +99,25 @@ git push --set-upstream origin main
 ### Update dependency versions in requirements.txt
 
 ```bash
+cffi==1.17.1 --> 2.0.0
+cryptography==44.0.0 --> 46.0.5
 fastapi==1.115.8 --> 1.139.0
 h11==1.14.0 --> 1.16.0
 httpcore==1.0.7 --> 1.0.9
+pyasn1==0.6.1 --> 0.6.3
+python-jose==3.3.0 --> 3.5.0
+python-multipart==0.0.20 --> 0.0.30
 # remove starlette
+typing-extensions==4.12.2 --> 4.13.2
 urllib3==2.3.0 --> 2.7.0
+```
+
+### Check for dependency conflicts and install different versions if necessary
+
+```bash
+pip install -r requirements.txt
+
+pip check
+
+pip install --upgrade -r requirements.txt
 ```
