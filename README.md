@@ -94,7 +94,14 @@ git commit -m 'Initial commit'
 git push --set-upstream origin main
 ```
 
-### Update dependency versions before install
+## Updating dependency versions
+
+### Update dependency versions in requirements.txt
 
 ```bash
-h11==1.14.0 --> h11==1.16.0s
+fastapi==1.115.8 --> 1.139.0
+h11==1.14.0 --> 1.16.0
+httpcore==1.0.7 --> 1.0.9
+# remove starlette
+urllib3==2.3.0 --> 2.7.0
+```
